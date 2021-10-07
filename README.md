@@ -59,7 +59,7 @@ export ITC_PASSWORD="your-app-store-connect-account-password"
 # Optional: If you're in multiple teams, enter the IDs of your App Store Connect team here (comma separated).
 export ITC_TEAM_IDS=132123123,456456456
 
-# The bundle identifier of the app you want these scripts to monitor the status. Required.
+# The bundle identifier of the app you want these scripts to monitor the status. Required. You can alternatively pass a comma separated list of bundle identifiers to monitor
 export BUNDLE_IDENTIFIER="com.apple.swift"
 
 # Specify the channel you'd like the bot to post App Store Connect status updates. Don't forget to add the bot to this channel in Slack so it can post there. Required.
@@ -70,6 +70,9 @@ export BOT_STATUS_SLACK_CHANNEL_NAME="#ios-bot-status-updates"
 
 # The API token for your bot, provided by Slack. Required.
 export BOT_API_TOKEN="xoxb-123123123123-ASDASDASDASD-FGHFGHFGHFGH"
+
+# The webhook url provided by slack for your channel. When using this the channel and api tokens are not needed
+export BOT_SLACK_WEBHOOK_URL="https://hooks.slack.com/services/XXXXXXXX/XXXXXXXX/XxxxXXXXXxxxxxxxxxxxx"
 
 # How often the script should check for updates (in seconds). Required.
 export POLL_TIME_IN_SECONDS=120
